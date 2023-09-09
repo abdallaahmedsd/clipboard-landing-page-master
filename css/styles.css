@@ -240,3 +240,12 @@ body {
   }
 }
 /* </Track snippets section> */
+
+/* <Access clipboard anywhere>*/
+.access-anywhere .img-container {
+  text-align: center;
+}
+.access-anywhere .img-container img {
+  max-width: 100%;
+}
+/* </Access clipboard anywhere> */
