@@ -1,0 +1,171 @@
+/* <Global rules> */
+:root {
+  /* Primary colors */
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  /* Neutral colors */
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+}
+
+body {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+* , *::before , *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* </Global rules> */
+
+/* <Section heading>*/
+.section-heading {
+  min-width: 300px;
+  max-width: 700px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 3.5rem;
+}
+
+.section-heading .title {
+  font-size: 2.1rem;
+  color: var(--dark-grayish-blue);
+}
+
+.section-heading .preview {
+  line-height: 1.6;
+  margin-top: 1.4rem;
+  color: var(--grayish-blue);
+}
+/* </Section heading> */
+
+/* <Landing page> */
+#landing-page {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#landing-page .header-bg {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#landing-page .header-bg > img {
+  display: block;
+  width: 100%;
+}
+
+#landing-page .header-bg .bg-header-desktop {
+  display: none;
+}
+
+#landing-page .logo-container {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+#landing-page .logo-container img {
+  max-width: 100%;
+}
+
+#landing-page .main-heading .title {
+  margin: 0; /* This is h1 and it won't inherit the global seclctor (*) because I use normalize.css */
+}
+
+.btns-container {
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btns-container .btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btns-container .btn.ios-btn {
+  background-color: var(--strong-cyan);
+}
+
+.btns-container .btn.mac-btn {
+  background-color: var(--light-blue);
+}
+
+.btns-container .btn:hover {
+  filter: brightness(0.85);
+}
+
+@media (min-width: 768px) {
+  #landing-page .header-bg .bg-header-desktop {
+    display: block;
+  }
+
+  #landing-page .header-bg .bg-header-mobile {
+    display: none;
+  }
+
+.btns-container {
+    flex-direction: row;
+  }
+
+.btns-container .btn {
+    width: fit-content;
+  }
+  
+  #landing-page .main-heading .title {
+    font-size: 2.5rem;
+  }
+
+  #landing-page .main-heading .preview {
+    font-size: 1.2rem;
+  }
+}
+/* </Landing page> */
