@@ -292,8 +292,42 @@ body {
     max-width: 320px;
   }
 
+  .workflow .cards .card:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
   .workflow .cards .card .preview {
     max-width: 100%;
   }
 }
 /* </Supercharge your workflow> */
+
+/* <Companies section>*/
+.companies .boxes .box {
+  max-width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.companies .boxes .box:not(:last-of-type) {
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 500px) {
+  .companies .boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .companies .boxes .box {
+    margin: 0;
+  }
+
+  .companies .boxes .box:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+}
+/* </Companies section> */
